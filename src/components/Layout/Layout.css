@@ -1,0 +1,75 @@
+/* Layout.css */
+
+/* Fondo negro para la barra de navegación */
+.navbar {
+  background-color: #000000; /* Fondo negro */
+}
+
+.navbar-brand {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #1cc88a; /* Verde brillante para el logo */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Íconos de la barra de navegación en blanco */
+}
+
+.navbar-nav .nav-item {
+  padding-right: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f8f9fa; /* Texto en blanco */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #020202; /* Color al pasar el mouse */
+}
+
+/* Estilo de la bienvenida */
+.welcome-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Estilo del botón Logout */
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-logout:hover {
+  background-color: #c82333; /* Cambio de color en hover */
+  border-color: #bd2130;
+}
+
+/* Estilos para el contenedor principal */
+.main-content {
+  padding: 20px;
+  background-color: #f8f9fa; /* Fondo claro para el contenido */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0a0a0a; /* Color verde suave para el logo */
+}
+
+.bg-custom {
+  background-color: #4e73df; /* Fondo azul para la barra de navegación */
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    margin-top: 10px; /* Margen superior para móviles */
+  }
+}

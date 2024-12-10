@@ -1,0 +1,136 @@
+/* Contenedor principal del chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor para los mensajes, limitando solo dentro del chatbot */
+.chatbot-container .chatbox {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para los mensajes */
+.chatbot-container .message {
+    display: flex;
+    align-items: flex-start;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Estilo de los mensajes del usuario */
+.chatbot-container .message.user {
+    background-color: #d4edda; /* Fondo verde suave */
+    align-self: flex-end; /* Los mensajes del usuario a la derecha */
+    text-align: right;
+    margin-left: 20px;
+    padding-right: 40px; /* Espacio para el avatar del bot */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar del usuario */
+.chatbot-container .message.user::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://img.pikbest.com/origin/10/41/63/41ppIkbEsTs28.jpg!w700wp');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* Estilo de los mensajes del bot */
+.chatbot-container .message.bot {
+    background-color: #cce5ff; /* Fondo azul suave */
+    align-self: flex-start; /* Los mensajes del bot a la izquierda */
+    text-align: left;
+    padding-left: 40px; /* Espacio para el avatar */
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar del bot */
+.chatbot-container .message.bot::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://img.pikbest.com/origin/10/41/63/41ppIkbEsTs28.jpg!w700wp');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* Estilo para la caja de entrada */
+.chatbot-container form {
+    display: flex;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e3e6ea;
+}
+
+.chatbot-container input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.chatbot-container input:focus {
+    border-color: #007bff;
+}
+
+.chatbot-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatbot-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Animación para el mensaje de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,138 @@
+/* Fondo principal */
+.welcome-background {
+  background: url('https://w7.pngwing.com/pngs/734/402/png-transparent-fruits-background.png') no-repeat center center/cover; /* Fondo con imagen */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  align-items: center;
+  padding: 50px 20px; /* Espaciado para pantallas grandes y móviles */
+  text-align: center;
+  color: #000; /* Cambiado a color negro para el texto */
+  position: relative; /* Necesario para el overlay */
+}
+
+/* Overlay oscuro para mejorar la visibilidad del texto */
+.welcome-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Sombra oscura para mejorar la visibilidad */
+  z-index: -1; /* Coloca el overlay debajo del contenido */
+}
+
+/* Título principal */
+.display-3 {
+  font-family: 'Arial', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Sombra sutil para destacar el texto */
+  color: #000; /* Cambiado a negro para que el título sea negro */
+}
+
+/* Subtítulo */
+.text-muted {
+  font-size: 2rem;
+  color: #000; /* Cambiado a color negro suave */
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #000; /* Cambiado a negro */
+}
+/* Contenedor de las tarjetas */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que las tarjetas se ajusten */
+  justify-content: center; /* Centrado horizontal */
+  gap: 40px; /* Espacio entre las tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin-top: 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Tarjetas */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 330px; /* Limita el ancho de las tarjetas */
+  background-color: #ffffff;
+  color: #333; /* Color oscuro para el texto */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  transition: all 0.3s ease; /* Transición para efectos de hover */
+  margin-bottom: 30px;
+}
+
+.card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333; /* Color oscuro para el título */
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #777; /* Texto de descripción más suave */
+  margin-bottom: 20px;
+}
+
+/* Efecto de hover para las tarjetas */
+.card:hover {
+  transform: translateY(-10px); /* Levantar la tarjeta */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Mayor sombra al pasar el mouse */
+}
+
+/* Botones */
+.btn {
+  font-size: 1.1rem;
+  padding: 12px 35px;
+  border-radius: 30px; /* Botones más redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1a58d7; /* Color al pasar el mouse */
+  transform: scale(1.05); /* Agrandar ligeramente */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem; /* Reducir tamaño del título en móviles */
+  }
+
+  /* Las tarjetas se apilan en móviles */
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Ajustes de las tarjetas en móviles */
+  .card {
+    max-width: 100%;
+    height: auto; /* Ajuste de altura */
+  }
+
+  .btn {
+    font-size: 1rem; /* Botones más pequeños en móviles */
+  }
+}

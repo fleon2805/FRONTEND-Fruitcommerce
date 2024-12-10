@@ -1,0 +1,125 @@
+/* Estilos Globales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Fondo de la Página */
+  .login-background {
+    background-image: url('https://img.freepik.com/foto-gratis/vista-superior-surtido-frutas-espacio-copia_23-2148501502.jpg'); /* Cambia esta URL por la imagen de fondo que prefieras */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contenedor Principal */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Tarjeta de Login */
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effect for the Card */
+  .login-card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta ligeramente al hacer hover */
+  }
+  
+  /* Título */
+  .login-card h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Etiquetas de Formulario */
+  .form-label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Campos de Entrada */
+  .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Botón de Enviar */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Efecto en los inputs al enfocar */
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 576px) {
+    .login-card {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .login-card h2 {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-card {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .login-container {
+      padding: 0 20px;
+    }
+  }
+  
